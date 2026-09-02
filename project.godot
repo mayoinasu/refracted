@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="keep-moving"
-run/main_scene="uid://e82mgr2fw5v2"
+run/main_scene="uid://dw3xsp0ugnyjm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

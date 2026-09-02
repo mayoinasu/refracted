@@ -3,23 +3,23 @@
 [ext_resource type="Script" uid="uid://b45i1fd7he6dg" path="res://asset/box.gd" id="1_1r2t2"]
 [ext_resource type="Texture2D" uid="uid://cqmrgrxbbeu8s" path="res://image asset/box.png" id="2_1r2t2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8efx"]
-size = Vector2(44, 49)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r2t2"]
+size = Vector2(64, 13.500002)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="StatisBody2D" type="StaticBody2D" parent="."]
-scale = Vector2(5, 5)
 input_pickable = true
 script = ExtResource("1_1r2t2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StatisBody2D"]
-position = Vector2(258, 42)
-shape = SubResource("RectangleShape2D_w8efx")
+position = Vector2(1.8000007, -0.7499995)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_1r2t2")
 
-[node name="Sprite2D" type="Sprite2D" parent="StatisBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(256, 48)
+position = Vector2(-1.4901161e-08, -2.9802322e-08)
 texture = ExtResource("2_1r2t2")
 region_enabled = true
-region_rect = Rect2(0, 0, 64, 100)
+region_rect = Rect2(384, 0, 64, 100)
