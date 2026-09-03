@@ -23,7 +23,6 @@ func _get_possible_directions():
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("click"):
-		print("yey")
 		rotate(deg_to_rad(90))
 		reflectionDirection += 1
 		if position_box == 0:

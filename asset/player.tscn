@@ -187,8 +187,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0aeb4"]
-radius = 17.0
-height = 66.0
+height = 26.0
 
 [sub_resource type="Animation" id="Animation_ocock"]
 length = 1.2
@@ -528,7 +527,6 @@ graph_offset = Vector2(-134.53987, -66.95009)
 position = Vector2(1494, 554)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("animation_tree", "agent")]
-scale = Vector2(5, 5)
 script = ExtResource("1_ocock")
 animation_tree = NodePath("AnimationTree")
 agent = NodePath("NavigationAgent2D")
@@ -536,10 +534,12 @@ agent = NodePath("NavigationAgent2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_31b8c")
-animation = &"front"
+animation = &"left"
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 1)
+position = Vector2(-1, 38)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_0aeb4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]

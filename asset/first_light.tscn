@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpc51r023v6o2"]
+
+[ext_resource type="Script" uid="uid://d2cdwxfg6ry6n" path="res://laser_start.gd" id="1_oeabl"]
+[ext_resource type="Texture2D" uid="uid://cqmrgrxbbeu8s" path="res://image asset/box.png" id="2_0x7ee"]
+
+[node name="first light" type="Node2D"]
+
+[node name="laser_start" type="Node2D" parent="."]
+script = ExtResource("1_oeabl")
+
+[node name="lasers" type="Node2D" parent="laser_start"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_0x7ee")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 100)
