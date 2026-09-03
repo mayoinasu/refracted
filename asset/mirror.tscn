@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://j2fof2aru3u5"]
+
+[ext_resource type="Script" uid="uid://cdmwtvmh24ot6" path="res://mirror.gd" id="1_feyr1"]
+[ext_resource type="Texture2D" uid="uid://cqmrgrxbbeu8s" path="res://image asset/box.png" id="2_eoipy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pbwo"]
+size = Vector2(39, 34)
+
+[node name="mirror" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_feyr1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_eoipy")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 1)
+shape = SubResource("RectangleShape2D_7pbwo")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

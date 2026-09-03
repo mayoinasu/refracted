@@ -1,23 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw3xsp0ugnyjm"]
 
-[ext_resource type="PackedScene" uid="uid://cr2fhslc5uiak" path="res://asset/box.tscn" id="1_tw77e"]
-[ext_resource type="PackedScene" uid="uid://bni8eg1y825x2" path="res://asset/box_source.tscn" id="2_3flxk"]
-[ext_resource type="PackedScene" uid="uid://ccefxtyk2h3wx" path="res://asset/laser.tscn" id="3_xesoj"]
+[ext_resource type="PackedScene" uid="uid://q18mb4wy5una" path="res://asset/mirror_rotate.tscn" id="2_rpurj"]
+[ext_resource type="PackedScene" uid="uid://djv2qnkwppkgx" path="res://asset/laser_start.tscn" id="5_70cbr"]
+[ext_resource type="PackedScene" uid="uid://j2fof2aru3u5" path="res://asset/mirror.tscn" id="6_lsoxn"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="laser" type="Node2D" parent="."]
-
-[node name="laser" parent="laser" node_paths=PackedStringArray("laser_source") instance=ExtResource("3_xesoj")]
-position = Vector2(76, 98)
-laser_source = NodePath("../../box/box_source")
-
 [node name="box" type="Node2D" parent="."]
-position = Vector2(3, 200)
-scale = Vector2(6, 6)
 
-[node name="Node2D" parent="box" instance=ExtResource("1_tw77e")]
-position = Vector2(308, 69)
+[node name="LaserStart" parent="box" instance=ExtResource("5_70cbr")]
+position = Vector2(868, 462)
 
-[node name="box_source" parent="box" instance=ExtResource("2_3flxk")]
-position = Vector2(71.666664, 90)
+[node name="mirror_rotate" parent="box" instance=ExtResource("2_rpurj")]
+position = Vector2(1008, 256)
+
+[node name="mirror" parent="box" instance=ExtResource("6_lsoxn")]
+position = Vector2(592, 368)
+
+[node name="mirror_rotate2" parent="box" instance=ExtResource("2_rpurj")]
+position = Vector2(1008, 368)
+
+[node name="mirror_rotate3" parent="box" instance=ExtResource("2_rpurj")]
+position = Vector2(864, 256)

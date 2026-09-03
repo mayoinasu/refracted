@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://djv2qnkwppkgx"]
+
+[ext_resource type="Script" uid="uid://d2cdwxfg6ry6n" path="res://laser_start.gd" id="1_8xbkm"]
+[ext_resource type="Texture2D" uid="uid://cqmrgrxbbeu8s" path="res://image asset/box.png" id="2_ext2x"]
+[ext_resource type="Texture2D" uid="uid://ca7tflkna0jcl" path="res://image asset/Cahaya .png" id="2_jk1eb"]
+
+[node name="LaserStart" type="Node2D"]
+script = ExtResource("1_8xbkm")
+laser_texture = ExtResource("2_jk1eb")
+
+[node name="lasers" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_ext2x")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 100)
