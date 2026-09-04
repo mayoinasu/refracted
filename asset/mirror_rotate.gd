@@ -29,7 +29,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			position_box = 384
 		else:
 			position_box -= 128
-		
+		print(position_box)
 		$"../Sprite2D".region_rect = Rect2(position_box, 0, 64, 100)
 
 		if reflectionDirection == REFLECT_DIRECTION.keys().size():

@@ -2,13 +2,14 @@ extends Node2D
 
 @onready var lasers: Node2D = $lasers
 @export var laser_texture: Texture2D
+@export_flags_2d_physics var laser_collision_mask: int = 1
 
 var laserStartDirection = Vector2.UP
 var length = 8000
+var _currentTarget: Node = null   # <-- BARU: nyimpen target yang lagi kena laser ini
 
 func _ready() -> void:
 	add_to_group("laser")
-	
 	refresh_laser()
 
 func refresh_laser():
@@ -22,6 +23,7 @@ func _set_laser():
 	var targetPoint = currentPoint + length * laserStartDirection
 	var nextTarget = _ray_cast(currentPoint, targetPoint, self)
 	var direction = laserStartDirection
+	var hitTargetThisPass = null   # <-- BARU
 
 	while nextTarget:
 		var reflectDirection
@@ -37,11 +39,26 @@ func _set_laser():
 		else:
 			_add_laser(currentPoint, nextTarget.position)
 			nextPoint = nextTarget.position
+
+			# BARU: kalau collider ini Target, tandai kena di pass ini
+			if nextTarget.collider.is_in_group("laser_target"):
+				hitTargetThisPass = nextTarget.collider
 			break
 			
 		currentPoint = nextPoint
 		targetPoint = currentPoint + length * direction
 		nextTarget = _ray_cast(currentPoint, targetPoint, nextTarget.collider)
+
+	_update_target_state(hitTargetThisPass)   # <-- BARU
+
+func _update_target_state(newTarget) -> void:
+	if newTarget == _currentTarget:
+		return
+	if _currentTarget:
+		_currentTarget.laser_unhit()
+	if newTarget:
+		newTarget.laser_hit()
+	_currentTarget = newTarget
 
 func _ray_cast(startPoint, targetPoint, excluded):
 	var space_state = get_world_2d().direct_space_state
@@ -63,5 +80,3 @@ func _add_laser(startPoint, endPoint):
 	lasers.add_child(line)
 	
 	line.global_position = startPoint
-	
-	

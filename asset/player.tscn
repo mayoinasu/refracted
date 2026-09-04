@@ -512,21 +512,22 @@ blend_point_7/node = SubResource("AnimationNodeAnimation_xxei8")
 blend_point_7/pos = Vector2(-0.2, -0.6)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b014b"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ocock"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0orgd"]
 states/stop/node = SubResource("AnimationNodeBlendSpace2D_68see")
-states/stop/position = Vector2(557.26, 105.24992)
+states/stop/position = Vector2(722.26, 64.87496)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_op15v")
-states/walk/position = Vector2(407.8999, 99.86875)
-transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_b014b")]
-graph_offset = Vector2(-134.53987, -66.95009)
+states/walk/position = Vector2(432.3999, 100.43437)
+transitions = ["Start", "walk", SubResource("AnimationNodeStateMachineTransition_ocock")]
+graph_offset = Vector2(112.83988, -24.462597)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1494, 554)
+scale = Vector2(1.4, 1.4)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("animation_tree", "agent")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("animation_tree", "agent") groups=["player"]]
 script = ExtResource("1_ocock")
 animation_tree = NodePath("AnimationTree")
 agent = NodePath("NavigationAgent2D")
@@ -534,8 +535,7 @@ agent = NodePath("NavigationAgent2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_31b8c")
-animation = &"left"
-frame = 2
+animation = &"back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-1, 38)
@@ -551,6 +551,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_0orgd")
 anim_player = NodePath("../AnimationPlayer")
 parameters/stop/blend_position = Vector2(0, 0)
-parameters/walk/blend_position = Vector2(-0.10855681, -0.66517854)
+parameters/walk/blend_position = Vector2(0.005108595, -0.91517854)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D"]

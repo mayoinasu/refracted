@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://exj8gamcnnw8"]
+
+[ext_resource type="Script" uid="uid://ddrylrkfo0lt1" path="res://door.gd" id="1_n7ygt"]
+[ext_resource type="Texture2D" uid="uid://ca4a4yh0d740a" path="res://image asset/tileset/door/IMG_3693.PNG" id="2_y0ms2"]
+[ext_resource type="Texture2D" uid="uid://b7gqiwuylnjju" path="res://image asset/tileset/door/IMG_3700.PNG" id="3_je41b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ewtk"]
+size = Vector2(87.692314, 99)
+
+[node name="door" type="Node2D"]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_n7ygt")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 11.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.0769234, 10.038462)
+shape = SubResource("RectangleShape2D_5ewtk")
+
+[node name="closed" type="Sprite2D" parent="."]
+position = Vector2(0, -5.384616)
+texture = ExtResource("2_y0ms2")
+
+[node name="opened" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1.5384617, 4.615385)
+texture = ExtResource("3_je41b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://d0hjomcdaxbey" path="res://asset/laser.gd" id="1_oxxac"]
 [ext_resource type="Texture2D" uid="uid://ca7tflkna0jcl" path="res://image asset/Cahaya .png" id="2_cmqgo"]
 
-[node name="laser" type="Node2D" node_paths=PackedStringArray("laser_source")]
+[node name="laser" type="Node2D"]
 script = ExtResource("1_oxxac")
-laser_source = NodePath("")
 laser_texture = ExtResource("2_cmqgo")
 
 [node name="Node2D" type="Node2D" parent="."]

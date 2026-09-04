@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://5yk2dune70qu"]
+
+[ext_resource type="Texture2D" uid="uid://dbpa3lh68s78v" path="res://image asset/tileset/censor/IMG_3747.PNG" id="1_7g0tx"]
+[ext_resource type="Script" uid="uid://dbxlx7na344q3" path="res://asset/censor.gd" id="1_u25l5"]
+[ext_resource type="Texture2D" uid="uid://noqfrjhdj0vj" path="res://image asset/tileset/censor/IMG_3748.PNG" id="3_xe10e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u25l5"]
+size = Vector2(58, 51)
+
+[node name="censor" type="StaticBody2D"]
+texture_filter = 1
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_u25l5")
+
+[node name="off" type="Sprite2D" parent="."]
+texture = ExtResource("1_7g0tx")
+
+[node name="on" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_xe10e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -5.5)
+shape = SubResource("RectangleShape2D_u25l5")
