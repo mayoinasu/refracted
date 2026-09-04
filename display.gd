@@ -6,6 +6,7 @@ func _ready() -> void:
 	visible = false
 
 func show_closeup(texture: Texture2D) -> void:
+	
 	display.texture = texture
 	visible = true
 

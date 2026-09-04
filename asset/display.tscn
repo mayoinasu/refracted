@@ -25,9 +25,9 @@ scale = Vector2(6, 6)
 texture = ExtResource("2_t3rrs")
 stretch_mode = 5
 
-[node name="text" type="Node2D" parent="."]
+[node name="corridor1" type="Node2D" parent="."]
 
-[node name="Label" type="Label" parent="text"]
+[node name="Label" type="Label" parent="corridor1"]
 texture_filter = 1
 offset_left = 344.0
 offset_top = 354.0
@@ -38,7 +38,7 @@ theme_override_fonts/font = ExtResource("3_fyq76")
 theme_override_font_sizes/font_size = 30
 text = "SUBJECT 0"
 
-[node name="Label2" type="Label" parent="text"]
+[node name="Label2" type="Label" parent="corridor1"]
 texture_filter = 1
 offset_left = 319.0
 offset_top = 430.0
@@ -49,7 +49,7 @@ theme_override_fonts/font = ExtResource("3_fyq76")
 theme_override_font_sizes/font_size = 20
 text = "HOST CONDITION: CRITICAL"
 
-[node name="Label3" type="Label" parent="text"]
+[node name="Label3" type="Label" parent="corridor1"]
 texture_filter = 1
 offset_left = 331.0
 offset_top = 484.0
@@ -60,7 +60,7 @@ theme_override_fonts/font = ExtResource("3_fyq76")
 theme_override_font_sizes/font_size = 20
 text = "ENERGY DEPLETION: 91%"
 
-[node name="Label4" type="Label" parent="text"]
+[node name="Label4" type="Label" parent="corridor1"]
 texture_filter = 1
 offset_left = 430.0
 offset_top = 160.0
