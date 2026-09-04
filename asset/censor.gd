@@ -10,17 +10,18 @@ func _ready() -> void:
 
 func laser_hit() -> void:
 	hit_count += 1
-	if hit_count == 1:
+	if hit_count >= 1:
 		print ("done")
 		activated.emit()
 		_on_activated()
 		$on.visible = true
 
 func laser_unhit() -> void:
-	hit_count = max(hit_count - 1, 0)
-	if hit_count == 0:
-		deactivated.emit()
-		_on_deactivated()
+	pass
+	#hit_count = max(hit_count - 1, 0)
+	#if hit_count == 0:
+		#deactivated.emit()
+		#_on_deactivated()
 
 func is_active() -> bool:
 	return hit_count > 0
