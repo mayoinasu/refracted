@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
-@export var speed = 100
+@export var speed = 300
 @export var animation_tree = AnimationTree
 @export var agent = NavigationAgent2D
 
 var hungry = false
+var freeze = false
 
 func get_input():
 	if hungry == true:
@@ -13,6 +14,7 @@ func get_input():
 	velocity = input_direction * speed
 	
 	if velocity == Vector2.ZERO:
+		pass
 		$AnimationTree.get("parameters/playback").travel("stop")
 	else:
 		$AnimationTree.get("parameters/playback").travel("walk")

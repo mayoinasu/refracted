@@ -56,10 +56,10 @@ shape = SubResource("RectangleShape2D_x17xt")
 [node name="Sprite2D2" type="Sprite2D" parent="background"]
 
 [node name="door" parent="background" instance=ExtResource("3_x17xt")]
-position = Vector2(433, 127)
+position = Vector2(456, 124)
 
 [node name="censor" parent="background" instance=ExtResource("4_c1764")]
-position = Vector2(609.99994, 174.99998)
+position = Vector2(612.99994, 179.99998)
 
 [node name="box" type="Node2D" parent="."]
 position = Vector2(26, 134)

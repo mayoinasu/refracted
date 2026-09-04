@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4rqps1ukqghw"]
+
+[ext_resource type="Script" uid="uid://di3gdycjjilpj" path="res://display.gd" id="1_561ol"]
+[ext_resource type="Texture2D" uid="uid://7fwvj66ckdbe" path="res://image asset/paper.PNG" id="2_t3rrs"]
+[ext_resource type="FontFile" uid="uid://b4o68oqi3dd64" path="res://image asset/font/DePixelHalbfett.ttf" id="3_fyq76"]
+
+[node name="display" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_561ol")
+
+[node name="Display" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.0
+offset_top = -112.0
+offset_right = -193.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6, 6)
+texture = ExtResource("2_t3rrs")
+stretch_mode = 5
+
+[node name="text" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="text"]
+texture_filter = 1
+offset_left = 344.0
+offset_top = 354.0
+offset_right = 725.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0.25357804, 0.12482422, 0.056160025, 1)
+theme_override_fonts/font = ExtResource("3_fyq76")
+theme_override_font_sizes/font_size = 30
+text = "SUBJECT 0"
+
+[node name="Label2" type="Label" parent="text"]
+texture_filter = 1
+offset_left = 319.0
+offset_top = 430.0
+offset_right = 700.0
+offset_bottom = 494.0
+theme_override_colors/font_color = Color(0.25357804, 0.12482422, 0.056160025, 1)
+theme_override_fonts/font = ExtResource("3_fyq76")
+theme_override_font_sizes/font_size = 20
+text = "HOST CONDITION: CRITICAL"
+
+[node name="Label3" type="Label" parent="text"]
+texture_filter = 1
+offset_left = 331.0
+offset_top = 484.0
+offset_right = 712.0
+offset_bottom = 548.0
+theme_override_colors/font_color = Color(0.25357804, 0.12482422, 0.056160025, 1)
+theme_override_fonts/font = ExtResource("3_fyq76")
+theme_override_font_sizes/font_size = 20
+text = "ENERGY DEPLETION: 91%"
+
+[node name="Label4" type="Label" parent="text"]
+texture_filter = 1
+offset_left = 430.0
+offset_top = 160.0
+offset_right = 558.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fyq76")
+theme_override_font_sizes/font_size = 20
+text = "[X] Hide"
