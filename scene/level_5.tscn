@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://1oe5tpg7qri7"]
+[gd_scene load_steps=29 format=3 uid="uid://1oe5tpg7qri7"]
 
+[ext_resource type="Script" uid="uid://0onaw6l2a2hj" path="res://scene/level_5.gd" id="1_h2wq0"]
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_hqf2v"]
 [ext_resource type="Texture2D" uid="uid://cf1piyjxljpqn" path="res://image asset/tileset/floor/IMG_3689.PNG" id="2_h2wq0"]
 [ext_resource type="Texture2D" uid="uid://bls30v5skl730" path="res://image asset/tileset/floor/IMG_3690.PNG" id="3_kbg43"]
@@ -302,6 +303,7 @@ size = Vector2(35, 440.5)
 size = Vector2(933, 36)
 
 [node name="level 5" type="Node2D"]
+script = ExtResource("1_h2wq0")
 
 [node name="background" type="Node2D" parent="."]
 
@@ -334,7 +336,7 @@ shape = SubResource("RectangleShape2D_gov8b")
 position = Vector2(478.5, 503)
 shape = SubResource("RectangleShape2D_ckm6v")
 
-[node name="Node2D3" parent="background" instance=ExtResource("10_7epdj")]
+[node name="door" parent="background" instance=ExtResource("10_7epdj")]
 modulate = Color(0.8089983, 0.8089983, 0.8089982, 1)
 position = Vector2(327, 125.00001)
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dakeq86r0gnfm"]
+[gd_scene load_steps=29 format=3 uid="uid://dakeq86r0gnfm"]
 
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_1jy6o"]
+[ext_resource type="Script" uid="uid://b8pj8slpry6hv" path="res://scene/level_3.gd" id="1_biklw"]
 [ext_resource type="Texture2D" uid="uid://cf1piyjxljpqn" path="res://image asset/tileset/floor/IMG_3689.PNG" id="2_y2se7"]
 [ext_resource type="Texture2D" uid="uid://bls30v5skl730" path="res://image asset/tileset/floor/IMG_3690.PNG" id="3_yjkjs"]
 [ext_resource type="Texture2D" uid="uid://6q2gac7mnt3s" path="res://image asset/tileset/wall/IMG_3683.PNG" id="4_biklw"]
@@ -302,6 +303,7 @@ size = Vector2(35, 440.5)
 size = Vector2(712, 36)
 
 [node name="level 3" type="Node2D"]
+script = ExtResource("1_biklw")
 
 [node name="background" type="Node2D" parent="."]
 
@@ -334,11 +336,11 @@ shape = SubResource("RectangleShape2D_ecqsm")
 position = Vector2(480, 503)
 shape = SubResource("RectangleShape2D_rr38x")
 
-[node name="Node2D3" parent="background" instance=ExtResource("10_yjkjs")]
-position = Vector2(483, 124)
-
 [node name="censor" parent="background" instance=ExtResource("11_biklw")]
 position = Vector2(387, 176)
+
+[node name="door" parent="background" instance=ExtResource("10_yjkjs")]
+position = Vector2(501, 124)
 
 [node name="box" type="Node2D" parent="."]
 position = Vector2(26, 134)

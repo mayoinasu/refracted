@@ -23,25 +23,16 @@ func _on_body_exited(body: Node2D) -> void:
 		$"../Label2".visible = false
 		$"../Label3".visible = false
 		$Label.visible = false
-		set_process_unhandled_input(false) 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not is_inside_tree():
-		return
-		
 	if event.is_action_pressed("inspect"):
 		hint3.emit()
 		$"../Sprite2D".visible = true
 		$"../Label2".visible = true
 		$"../Label3".visible = true
-		var vp = get_viewport()
-		if vp:
-			vp.set_input_as_handled()
+		get_viewport().set_input_as_handled()
 	
 	if event.is_action_pressed("hide"):
 		$"../Sprite2D".visible = false
 		$"../Label2".visible = false
 		$"../Label3".visible = false
-		var vp = get_viewport()
-		if vp:
-			vp.set_input_as_handled()

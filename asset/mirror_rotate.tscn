@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://q18mb4wy5una"]
+[gd_scene load_steps=5 format=3 uid="uid://q18mb4wy5una"]
 
 [ext_resource type="Script" uid="uid://c0t4wdqy5g5f1" path="res://asset/mirror_rotate.gd" id="1_xs23b"]
 [ext_resource type="Texture2D" uid="uid://cqmrgrxbbeu8s" path="res://image asset/box.png" id="2_ps7o4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx7sq"]
 size = Vector2(39, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xs23b"]
+radius = 43.104523
 
 [node name="mirror_rotate" type="Node2D"]
 
@@ -21,5 +24,10 @@ texture_filter = 1
 texture = ExtResource("2_ps7o4")
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 100)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xs23b")
 
 [connection signal="input_event" from="StaticBody2D" to="StaticBody2D" method="_on_input_event"]
