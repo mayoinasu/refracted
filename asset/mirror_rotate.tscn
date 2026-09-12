@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://q18mb4wy5una"]
+[gd_scene load_steps=6 format=3 uid="uid://q18mb4wy5una"]
 
 [ext_resource type="Script" uid="uid://c0t4wdqy5g5f1" path="res://asset/mirror_rotate.gd" id="1_xs23b"]
 [ext_resource type="Texture2D" uid="uid://cqmrgrxbbeu8s" path="res://image asset/box.png" id="2_ps7o4"]
+[ext_resource type="FontFile" uid="uid://b4o68oqi3dd64" path="res://image asset/font/DePixelHalbfett.ttf" id="3_ps7o4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx7sq"]
 size = Vector2(39, 34)
@@ -30,4 +31,17 @@ region_rect = Rect2(0, 0, 64, 100)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_xs23b")
 
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -42.0
+offset_top = -53.0
+offset_right = 42.0
+offset_bottom = -30.0
+theme_override_fonts/font = ExtResource("3_ps7o4")
+theme_override_font_sizes/font_size = 12
+text = "RClick [Rotate]"
+
 [connection signal="input_event" from="StaticBody2D" to="StaticBody2D" method="_on_input_event"]
+[connection signal="body_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw3xsp0ugnyjm"]
+[gd_scene load_steps=14 format=3 uid="uid://dw3xsp0ugnyjm"]
 
 [ext_resource type="Script" uid="uid://d35j7lxa7ivp1" path="res://scene/level_1.gd" id="1_70cbr"]
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_xesoj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://5yk2dune70qu" path="res://asset/censor.tscn" id="4_c1764"]
 [ext_resource type="PackedScene" uid="uid://e82mgr2fw5v2" path="res://asset/player.tscn" id="5_53ndp"]
 [ext_resource type="PackedScene" uid="uid://djv2qnkwppkgx" path="res://asset/laser_start.tscn" id="5_70cbr"]
+[ext_resource type="PackedScene" uid="uid://b3subd6ecd8m1" path="res://asset/hunger_bar.tscn" id="9_c1764"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53ndp"]
 size = Vector2(641, 117)
@@ -81,3 +82,5 @@ position = Vector2(352, 119)
 
 [node name="Node2D" parent="player" instance=ExtResource("5_53ndp")]
 position = Vector2(418, 279)
+
+[node name="Control" parent="." instance=ExtResource("9_c1764")]

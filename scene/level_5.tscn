@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://1oe5tpg7qri7"]
+[gd_scene load_steps=30 format=3 uid="uid://1oe5tpg7qri7"]
 
 [ext_resource type="Script" uid="uid://0onaw6l2a2hj" path="res://scene/level_5.gd" id="1_h2wq0"]
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_hqf2v"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://djv2qnkwppkgx" path="res://asset/laser_start.tscn" id="12_sggky"]
 [ext_resource type="PackedScene" uid="uid://q18mb4wy5una" path="res://asset/mirror_rotate.tscn" id="13_xt4lh"]
 [ext_resource type="PackedScene" uid="uid://e82mgr2fw5v2" path="res://asset/player.tscn" id="14_2dvkj"]
+[ext_resource type="PackedScene" uid="uid://b3subd6ecd8m1" path="res://asset/hunger_bar.tscn" id="16_kbg43"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78fqf"]
 texture = ExtResource("2_h2wq0")
@@ -392,3 +393,5 @@ position = Vector2(740, 334)
 
 [node name="Node2D" parent="player" instance=ExtResource("14_2dvkj")]
 position = Vector2(383.00003, 417)
+
+[node name="Control" parent="." instance=ExtResource("16_kbg43")]

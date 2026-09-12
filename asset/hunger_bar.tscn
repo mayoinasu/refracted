@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3subd6ecd8m1"]
+
+[ext_resource type="Texture2D" uid="uid://bxss62h6cc7bk" path="res://image asset/bar-empty.PNG" id="1_kygrv"]
+[ext_resource type="Texture2D" uid="uid://sj0ol6psc051" path="res://image asset/bar-full.PNG" id="2_fpuof"]
+[ext_resource type="Script" uid="uid://by8r5vcq8flvx" path="res://asset/hunger_bar.gd" id="3_fpuof"]
+
+[node name="Control" type="CanvasLayer"]
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 0)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture_under = ExtResource("1_kygrv")
+texture_progress = ExtResource("2_fpuof")
+script = ExtResource("3_fpuof")

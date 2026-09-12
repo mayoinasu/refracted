@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bfabt7m4iduqr"]
+[gd_scene load_steps=36 format=3 uid="uid://bfabt7m4iduqr"]
 
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_5nlim"]
 [ext_resource type="Script" uid="uid://drb6w6bc2vxq6" path="res://scene/corridor_2.gd" id="1_tfgv3"]
@@ -19,6 +19,7 @@
 [ext_resource type="FontFile" uid="uid://b4o68oqi3dd64" path="res://image asset/font/DePixelHalbfett.ttf" id="17_wkxig"]
 [ext_resource type="Script" uid="uid://crhdfd41iehir" path="res://scene/paper2.gd" id="18_bsdss"]
 [ext_resource type="Script" uid="uid://b10u64gp4rfui" path="res://scene/paper3.gd" id="19_wkxig"]
+[ext_resource type="PackedScene" uid="uid://b3subd6ecd8m1" path="res://asset/hunger_bar.tscn" id="20_cu7ee"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5f1w"]
 texture = ExtResource("2_4r5kk")
@@ -709,6 +710,8 @@ theme_override_fonts/font = ExtResource("17_wkxig")
 theme_override_font_sizes/font_size = 27
 text = "[X] Hide"
 metadata/_edit_use_anchors_ = true
+
+[node name="Control" parent="." instance=ExtResource("20_cu7ee")]
 
 [connection signal="body_entered" from="background/door/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="hint/paper1/area" to="hint/paper1/area" method="_on_body_entered"]

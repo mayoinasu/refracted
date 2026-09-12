@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 300
+@export var speed = 100
 @export var animation_tree = AnimationTree
 @export var agent = NavigationAgent2D
 

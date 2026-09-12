@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dld2q5r0xbadk"]
+[gd_scene load_steps=30 format=3 uid="uid://dld2q5r0xbadk"]
 
 [ext_resource type="Script" uid="uid://l7ssho4o3ts" path="res://scene/level_2.gd" id="1_empab"]
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_g1oo2"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://5yk2dune70qu" path="res://asset/censor.tscn" id="11_empab"]
 [ext_resource type="PackedScene" uid="uid://q18mb4wy5una" path="res://asset/mirror_rotate.tscn" id="11_qyxx2"]
 [ext_resource type="PackedScene" uid="uid://e82mgr2fw5v2" path="res://asset/player.tscn" id="12_qyxx2"]
+[ext_resource type="PackedScene" uid="uid://b3subd6ecd8m1" path="res://asset/hunger_bar.tscn" id="16_2g5w6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2g5w6"]
 texture = ExtResource("2_txbx5")
@@ -364,3 +365,5 @@ position = Vector2(454, 269)
 
 [node name="Node2D" parent="player" instance=ExtResource("12_qyxx2")]
 position = Vector2(356, 310)
+
+[node name="Control" parent="." instance=ExtResource("16_2g5w6")]

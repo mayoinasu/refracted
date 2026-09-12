@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://eo68m075xo8p"]
+[gd_scene load_steps=54 format=3 uid="uid://eo68m075xo8p"]
 
 [ext_resource type="Script" uid="uid://b50icn81obvy4" path="res://scene/corridor_5.gd" id="1_54plj"]
 [ext_resource type="PackedScene" uid="uid://cpoqiqo4x5ag8" path="res://asset/tilemap.tscn" id="1_vah5j"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://ckj042nei3qwn" path="res://image asset/computer/IMG_3735.PNG" id="21_hichp"]
 [ext_resource type="Texture2D" uid="uid://babqni3kmjdov" path="res://image asset/wall ornament/IMG_3695.PNG" id="22_d6qr3"]
 [ext_resource type="FontFile" uid="uid://b4o68oqi3dd64" path="res://image asset/font/DePixelHalbfett.ttf" id="23_pwhmj"]
+[ext_resource type="PackedScene" uid="uid://b3subd6ecd8m1" path="res://asset/hunger_bar.tscn" id="25_80v7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j17y0"]
 texture = ExtResource("2_54plj")
@@ -916,17 +917,6 @@ flip_h = true
 position = Vector2(387, 86)
 texture = ExtResource("19_f05pj")
 
-[node name="player" type="Node2D" parent="."]
-
-[node name="Node2D" parent="player" instance=ExtResource("20_cdesx")]
-position = Vector2(463, 790)
-
-[node name="Camera2D" type="Camera2D" parent="player/Node2D"]
-limit_left = 0
-limit_top = 0
-limit_right = 950
-limit_bottom = 1000
-
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
@@ -941,6 +931,19 @@ scale = Vector2(0.7642661, 1.1282355)
 skew = 0.5323256
 texture = ExtResource("22_d6qr3")
 flip_h = true
+
+[node name="Control" parent="." instance=ExtResource("25_80v7m")]
+
+[node name="player" type="Node2D" parent="."]
+
+[node name="Node2D" parent="player" instance=ExtResource("20_cdesx")]
+position = Vector2(463, 790)
+
+[node name="Camera2D" type="Camera2D" parent="player/Node2D"]
+limit_left = 0
+limit_top = 0
+limit_right = 950
+limit_bottom = 1000
 
 [node name="photo" type="Node2D" parent="."]
 

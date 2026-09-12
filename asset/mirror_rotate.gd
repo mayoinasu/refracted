@@ -1,10 +1,14 @@
 extends StaticBody2D
 
 var position_box = 512
+var yes = false
 
 enum REFLECT_DIRECTION {NW, NE, SE, SW}
 
 var reflectionDirection: REFLECT_DIRECTION = REFLECT_DIRECTION.NE
+
+func _ready() -> void:
+	set_process_unhandled_input(false)
 
 func get_reflect_direction(impactDirection):
 	var possibleDirections = _get_possible_directions()
@@ -22,7 +26,8 @@ func _get_possible_directions():
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_action_just_pressed("click"):
+	if yes and Input.is_action_pressed("click"):
+		print("bisa")
 		rotate(deg_to_rad(90))
 		reflectionDirection += 1
 		if position_box == 0:
@@ -37,3 +42,17 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 		var laser = get_tree().get_first_node_in_group("laser")
 		laser.refresh_laser()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$"../Label".visible = true
+		yes = true
+		print("masuk")
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$"../Label".visible = false
+		yes = false
+		print("keluar")
