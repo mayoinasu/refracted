@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxxjo86l4wp8b"]
+
+[ext_resource type="Script" uid="uid://bb1fmmqbep2vq" path="res://asset/global_script.gd" id="1_37m4g"]
+[ext_resource type="AudioStream" uid="uid://cp8mea1speyax" path="res://audio/main_theme.WAV" id="1_baetf"]
+[ext_resource type="AudioStream" uid="uid://dv3s6tb3jnx85" path="res://audio/hungry.WAV" id="3_g7n5c"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_37m4g")
+
+[node name="main_theme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_baetf")
+autoplay = true
+
+[node name="hungry" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_g7n5c")

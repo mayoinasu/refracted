@@ -9,7 +9,7 @@ var freeze = false
 
 func get_input():
 	if hungry == true:
-		speed = 30
+		speed = 70
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 	
@@ -25,3 +25,9 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if GlobalScript.current_value < 50:
+		hungry = true
+	else:
+		hungry = false

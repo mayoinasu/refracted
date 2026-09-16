@@ -17,8 +17,8 @@ func get_reflect_direction(impactDirection):
 		possibleDirections.erase(-impactDirection)
 		return possibleDirections[0]
 		
-func _get_possible_directions():
-	match reflectionDirection:
+func _get_possible_directions(): 
+	match reflectionDirection: 
 		REFLECT_DIRECTION.NW: return [Vector2.UP, Vector2.LEFT]
 		REFLECT_DIRECTION.NE: return [Vector2.UP, Vector2.RIGHT]
 		REFLECT_DIRECTION.SW: return [Vector2.DOWN, Vector2.LEFT]

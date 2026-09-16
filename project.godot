@@ -19,6 +19,7 @@ run/size/viewport_height=648
 [autoload]
 
 GlobalScript="*res://asset/global_script.gd"
+AudioPlayer="*res://asset/audio_player.tscn"
 
 [display]
 
