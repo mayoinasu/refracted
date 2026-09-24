@@ -3,6 +3,7 @@
 Hello everyone! So this is a repository of my game that I made for Stardance by Hack Club!
 This game is a puzzle game where player have to rotating a box to manage the light to open the door.
 Hope you guys enjoy this game!
+
 Here's the playable link:
 https://mayoinasu.itch.io/refracted
 
